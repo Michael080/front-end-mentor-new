@@ -136,10 +136,14 @@ input[type='email'] {
   .call-to-action {
     width: 375px;
   }
+
+  footer {
+    /* display: inline-block; */
+  }
 }
 
-/* width: 750px (landscape) */
-@media (min-width: 750px) {
+/* width: 715px (row-layout) */
+@media (min-width: 715px) {
   .container-main {
     position: absolute;
     top: 0;
@@ -147,17 +151,26 @@ input[type='email'] {
   .call-to-action {
     text-align: left;
     width: 45%;
+    /* height: 100%; */
     margin-top: 11.5em;
     margin-left: 25px;
   }
+}
 
-  footer {
-    margin-top: 95vh;
-  }
+/* ! https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ */
+/* width: 768px (landscape) --- iPad */
+@media only screen 
+and (min-device-width: 768px)
+and (max-device-width: 1024)
+and (orientation: landscape) {
+  /* .accent-txt {
+    background-color: blue;
+    color: blue;
+  } */
 }
 
 /* TODO --- Move queries to corresponding sections */
-/* width: 1200px (landscape) */
+/* width: 1200px (row-layout) */
 @media (min-width: 1200px) {
   .image-container {
     width: 40%;
@@ -225,10 +238,32 @@ input:placeholder-shown {
 }
 
 /*--- form/button media-queries ---*/
-/* width: 750px (landscape) */
+/* width: 750px (row-layout) */
 @media (min-width: 750px) {
   .container-email {
     margin-left: 0;
+  }
+}
+
+/* width: 768px (landscape) --- iPad */
+@media (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape) {
+  .call-to-action {
+    height: 100vh%;
+  }
+
+  footer {
+    
+  }
+
+  footer {
+    /* position: relative; */
+    /* bottom: -em; */
+    /* margin-top: 95vh; */
+    /* align-self: flex-end; */
+    /* justify-self: flex-end; */
+    /* align-content: flex-end; */
   }
 }
 
@@ -297,7 +332,7 @@ input:placeholder-shown {
 
 /*--- @-images media-queries ---*/
 /* width: 750px (landscape) */
-@media (min-width: 750px) {
+@media (min-width: 715px) {
   .img-logo {
     margin-top: 3.5em;
     margin-left: 50px;
