@@ -1,0 +1,132 @@
+/* General */
+
+body {
+  font-family: 'Mitr', sans-serif;  
+  text-align: center;
+  background-color: #0a0c1b;
+  padding: 5px;
+}
+
+/* Typography */
+
+h1, 
+.stat {
+  color: white;
+}
+
+h1 {
+  font-family: 'Inter', sans-serif;
+  color: white;
+  font-size: 1.7em;
+  font-weight: 300;
+  line-height: 100%;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  color: #9694ac;
+  font-size: .85em;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.stats-container p:last-child{
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.accent {
+  color: hsl(278, 66%, 62%);
+}
+
+.stats-container p:first-child {
+  font-size: 1.5em;
+}
+
+/* Layout */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #1c1938;
+  max-width: 600px;
+  height: 75%;
+  padding-bottom: .5em;
+  border-radius: 10px;
+}
+
+.image {
+  background-image: url(stats-preview-card-component-main/images/image-header-desktop.jpg);
+  opacity: 35%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color:hsl(278, 66%, 62%);
+  background-blend-mode: luminosity;
+  width: 100%;
+  min-height: 33.33vh;
+  margin-bottom: 1em;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+@media screen and (min-width: 825px) {
+  body {
+    margin: 15px auto;
+  }
+
+  .card {
+    flex-direction: row-reverse;
+    text-align: left;
+    max-width: 900px;
+    width: 95%;
+    margin: 25px;
+    padding-bottom: 0;
+  }
+
+  .image {
+    min-width: 50%;
+    margin-bottom: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 10px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 325px;
+    padding: 3em;
+  }
+
+  .stats-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.content {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.stats {
+  text-transform: uppercase;
+}
+
+.stat {
+  margin-bottom: 0;
+}
+
+.stats-container p:last-child {
+  font-size: .8em;
+}

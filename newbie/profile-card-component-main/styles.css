@@ -1,0 +1,142 @@
+/* Colors */
+
+:root {
+  --cyan: hsl(185, 75%, 39%);
+  --dark-blue: hsl(229, 23%, 23%);
+  --dark-gray: hsl(227, 10%, 46%);
+  --neutral: hsl(0, 0%, 59%);
+}
+
+/* General */
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  text-align: center;
+  background-image: url(./images/bg-pattern-top.svg);
+  background-color: var(--cyan);
+  background-position: bottom left;
+  background-size: 900px;
+}
+
+p,
+h3 {
+  margin-top: 0;
+}
+
+/* Typography */
+
+body {
+  color: var(--neutral);
+  height: 0px;
+  padding: .75em;
+}
+
+body,
+h3 {
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+body,
+h3 {
+  font-size: 14px;
+}
+
+.name,
+.stat {
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.name-age,
+.stat {
+  font-size: 18px;
+}
+
+/* Layout */
+
+.profile {
+    height: 179.45px;
+    
+}
+
+.container {
+  display: flex;
+  background-color: white;
+  opacity: 100%;
+  width: 338px;
+  margin: 0 auto;
+  border-radius: 1.5em;
+  
+}
+
+.column {
+  flex-direction: column;
+}
+
+.header {
+  border-top-right-radius: 1.5em;
+  border-top-left-radius: 1.5em;
+  width: 100%;
+  height: 161.45px;
+  background-image: url(./images/bg-pattern-card.svg);
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.profile-img {
+  position: relative;
+  top: 95px;
+  left: 105px;
+  width: 124.983px;
+  height: 119.65px;
+  border: 6px solid white;
+  border-radius: 119.65px;
+  background-image: url(./images/image-victor.jpg);
+  background-size: cover;
+  background-color: blue;
+}
+
+.profile {
+  width: 100%;
+  max-height: 161.45px;
+  border-bottom: 1px solid var(--neutral);
+}
+
+.name-age {
+  width: 100%;
+  margin-bottom: 1em;
+  padding-top: 85px;
+}
+
+.name,
+.age {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.name {
+  margin-right: 10px;
+}
+
+.location {
+  margin-bottom: 1em;
+}
+
+.stats-container {
+  justify-content: space-between;
+  width: 75%;
+  height: 89.725px;
+  margin: 0 auto;
+  margin-right: 50px;
+  margin-bottom: 1em;
+}
+
+.stat-container {
+  flex-direction: column-reverse;
+}
+
+.stat {
+  margin-bottom: .25em;
+}

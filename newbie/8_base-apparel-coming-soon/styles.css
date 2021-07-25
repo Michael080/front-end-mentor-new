@@ -1,0 +1,333 @@
+/* General */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  text-align: center;
+}
+
+h1,
+p {
+  margin-top: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+/*--- @-general media-queries ---*/
+/* width: 900px */
+@media (min-width: 900px) {
+  html {
+    font-size: 115%;
+  }
+}
+
+/* colors */
+
+:root {
+  /* primary */
+--desaturated-red: hsl(0, 36%, 70%);
+--soft-red: hsl(0, 93%, 68%);
+/* neutral */
+--grayish-red: hsl(0, 6%, 24%);
+}
+
+
+/* Typography */
+
+h1,
+.body-copy {
+  margin-bottom: 25px;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: .25em;
+}
+
+span {
+  font-weight: 300;
+}
+
+input {
+  text-transform: capitalize;
+}
+
+.accent-txt {
+  color: var(--desaturated-red);
+}
+
+.call-to-action {
+  padding: 1.5em;
+  max-width: 540px;
+}
+
+.body-copy {
+  font-size: .95rem;
+}
+
+.body-copy {
+  line-height: 1.65;
+}
+
+input[type='email'] {
+  font-size: 15px;
+}
+
+.email-invalid-msg {
+  color: var(--soft-red);
+  font-size: .75rem;
+  text-align: left;
+  margin-left: 26.5px;
+}
+
+/*--- @-typography media-queries ---*/
+/* width: 1200px */
+@media (min-width: 1200px) {
+  .body-copy {
+    line-height: 1.75;
+    margin-bottom: 2.5em;
+  }
+}
+
+
+/* Layout */
+
+.container {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 375px;
+  margin: 0 auto;
+}
+
+.container-email {
+  flex-direction: row;
+  margin-right: 5px;
+  margin-bottom: .5em;
+  max-width: 312px;
+}
+
+.attribution { 
+  font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+/*--- @-layout media-queries ---*/
+/* width: 715px */
+@media (min-width: 715px) {
+  .container-main {
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 100vw;
+    height: 100vh;
+  }
+
+  .call-to-action {
+    width: 375px;
+  }
+}
+
+/* width: 750px (landscape) */
+@media (min-width: 750px) {
+  .container-main {
+    position: absolute;
+    top: 0;
+  }
+  .call-to-action {
+    text-align: left;
+    width: 45%;
+    margin-top: 11.5em;
+    margin-left: 25px;
+  }
+
+  footer {
+    margin-top: 95vh;
+  }
+}
+
+/* TODO --- Move queries to corresponding sections */
+/* width: 1200px (landscape) */
+@media (min-width: 1200px) {
+  .image-container {
+    width: 40%;
+  }
+}
+
+/* form elements & buttons */
+input {
+  font-size: 1em;
+  text-transform: lowercase;
+  width: 100%;
+  padding: 1em;
+  padding-left: 2em;
+  border: 1px solid var(--desaturated-red);
+  border-radius: 50% 60% 60% 50% / 250%;
+}
+
+/* ! https://stackoverflow.com/questions/34799526/style-an-asptextbox-placeholder-with-css */
+input:placeholder-shown {
+  text-transform: capitalize;
+}
+
+.email-input:focus {
+  border: none;
+  border-style: none;
+  outline: none;
+  border: 2px solid var(--soft-red);
+  color: yellow;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  width: 75px;
+  margin-left: -65px;
+}
+
+.btn-submit {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 53px;
+  border-radius: 26.5px;
+  /* ! https://www.w3schools.com/csSref/func_linear-gradient.asp */
+  background-image: linear-gradient(135deg,hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  box-shadow: 1px 1px 10px var(--soft-red);
+  box-shadow: 2.5px 2.5px 10px var(--desaturated-red);
+}
+
+.btn-submit:hover {
+  background-image: linear-gradient(135deg,hsl(0, 0%, 100%), hsl(0, 74%, 74%));
+}
+
+.hover-cursor:hover {
+  cursor: pointer;
+}
+
+.submit-arrow {
+  background-image: url(./images/icon-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 25px;
+  width: 15px;
+}
+
+/*--- form/button media-queries ---*/
+/* width: 750px (landscape) */
+@media (min-width: 750px) {
+  .container-email {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-email{
+    width: 450px;
+  }
+  .email-input {
+    min-width: 450px;
+    border-radius: 50% 60% 60% 50% / 400%;
+  }
+
+  .btn-container {
+    width: 95px;
+    }
+}
+
+/* images */
+
+.img {
+  background-repeat: no-repeat;
+}
+
+.img-logo {
+  background-image: url(./images/logo.svg);
+  background-size: contain;
+  width: 125px;
+  height: 25px;
+  margin: 35px;
+  margin: 2em;
+}
+
+.image-container {
+  width: 100%;
+}
+
+.img-hip-lady {
+  background-image: url(./images/hero-mobile.jpg);
+  background-size: contain;
+  background-position: center;
+  width: 375px;
+  height: 275px;
+  margin-bottom: 2em;
+}
+
+.email-error-icon {
+  position: relative;
+  background-image: url('./images/icon-error.svg');
+  top: 14.75px;
+  right: 100px;
+  width: 30px;
+  height: 25px;
+  margin: 0;
+}
+
+.arrow {
+  background-image: url(./images/icon-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(180deg);
+  height: 25px;
+  width: 25px;
+}
+
+/* TODO --- Reposition hip-lady @ screensizes below height: 515px */
+
+/*--- @-images media-queries ---*/
+/* width: 750px (landscape) */
+@media (min-width: 750px) {
+  .img-logo {
+    margin-top: 3.5em;
+    margin-left: 50px;
+  }
+
+  .image-container {
+    min-height: 100vh;
+    width: 47%;
+  }
+
+  .img-hip-lady {
+    background-image: url(./images/hero-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* width: 850px (landscape) */
+@media (min-width: 850px) {
+  .image-container {
+    width: 53%;
+    max-width: 610px;
+  }
+}
+
+/* width: 850px (landscape) */
+@media (min-width: 850px) {
+  .image-container {
+    width: 53%;
+  }
+}

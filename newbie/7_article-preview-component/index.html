@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Article preview component</title>
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="background-bleed">
+      <div class="img img-header"></div>
+    </div>
+    <div class="content-main">
+      <div class="teaser">
+        <h3 class="article-heading">Shift the overall look and feel by adding these wonderful touches to furniture in your home</h3>
+        <p class="description">Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.</p>
+
+        <div class="tooltip hidden">
+          <div class="footer-active-tooltip" id="active-tooltip">
+            <h3 class="share-txt">Share</h3>
+            <div class="img icon icon-facebook"></div>
+            <div class="img icon icon-twitter"></div>
+            <div class="img icon icon-pinterest"></div>
+          </div><!-- ./.footer-active-tooltip -->
+          <div class="arrow-container">
+            <div class="arrow-down"></div>
+          </div><!-- ./arrow-container -->
+        </div><!-- ./tooltip -->
+      </div><!-- ./teaser -->
+
+      <div class="footer-section">
+        <!-- footer footer-initial hidden -->
+        <div class="footer footer-initial">
+          <div class="article-info">
+            <div class="img profile-pic"></div>
+            <div class="name-date">
+              <div class="name">Michelle Appleton</div>
+              <div class="date">28 Jun 2020</div>
+            </div>
+          </div><!-- ./.article-info -->
+          <div class="btn-container">
+            <div class="img btn-share btn-share-light"></div>
+          </div>
+        </div><!-- ./.footer-initial -->
+
+        <div class="footer footer-active hidden">
+          <h3 class="share-txt">Share</h3>
+          <div class="img icon icon-facebook"></div>
+          <div class="img icon icon-twitter"></div>
+          <div class="img icon icon-pinterest"></div>
+          <div class="btn-container btn-container-active">
+            <div class="img btn-share btn-share-active"></div>
+          </div>
+        </div><!-- ./.footer-active -->
+      </div><!-- ./.footer-section -->
+
+    </div><!-- ./.content-main -->
+  </div><!-- ./.container -->
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.github.com/Michael080">Michael Rollin</a>.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

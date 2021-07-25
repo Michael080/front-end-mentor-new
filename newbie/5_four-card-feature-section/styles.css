@@ -1,0 +1,184 @@
+/* General */
+
+html {
+  font-size: 83%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  margin: 0;
+  padding: 1em;
+}
+
+/* colors */
+
+:root {
+  /* primary */
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+    /* neutral */
+    --dark-blue: hsl(234, 12%, 34%);
+    --gray-blue: hsl(229, 6%, 66%);
+    --light-gray: hsl(0, 0%, 98%);
+}
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  color: var(--dark-blue);
+}
+
+p,
+.icon {
+  margin-top: 0;
+}
+
+.headline-1 {
+  margin-bottom: .5em;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: .5em;
+}
+
+p {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--gray-blue);
+  margin-bottom: 3em;
+}
+
+.heading {
+  text-align: center;
+  width: 100%;
+}
+
+.tagline {
+  font-size: 15px;
+}
+
+/* Layout */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  box-shadow: .75em .75em 20px var(--gray-blue);
+  width: 329px;
+  padding: 2em;
+  margin-bottom: 2em;
+  border-radius: 5px;
+}
+
+.card-supervisor {
+  border-top: 5px solid var(--cyan);
+}
+
+.card-teambuilder {
+  border-top: 5px solid var(--red);
+}
+
+.card-karma {
+  border-top: 5px solid var(--orange);
+}
+
+.card-calculator {
+  border-top: 5px solid var(--blue);
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+.card:hover {
+  cursor: pointer;
+  color: black;
+}
+
+/* images */
+
+.icon {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 4em;
+  height: 4em;
+  align-self: flex-end;
+}
+
+.icon-supervisor {
+  background-image: url(./images/icon-supervisor.svg);
+}
+
+.icon-teambuilder {
+  background-image: url(./images/icon-team-builder.svg);
+}
+
+.icon-karma {
+  background-image: url(./images/icon-karma.svg);
+}
+
+.icon-calculator {
+  background-image: url(./images/icon-calculator.svg);
+}
+
+/* Media Queries */
+
+@media (min-width: 1100px) {
+  body {
+    padding: 2em;
+  }
+
+  .container {
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+
+  .row-2 {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1062px;
+  }
+
+  .card-teambuilder {
+    margin-bottom: 2.5em;
+  }
+}

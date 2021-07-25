@@ -1,0 +1,153 @@
+/*   General   */
+
+:root {
+  --light-gray: hsl(0, 0%, 95%); /* buttons, background, & type*/
+  --accent-sedan: hsl(31, 77%, 52%);
+  --accent-suv: hsl(184, 100%, 22%);
+  --accent-luxury:  hsl(179, 100%, 13%);
+}
+
+body {
+  font-size: 15px;
+}
+
+body,
+.btn {
+  background-color: var(--light-gray);
+}
+
+h2, p {
+  margin-top: 0;
+  
+}
+
+p {
+  margin-bottom: 3em;
+}
+
+/*   Typography   */
+
+h2
+ {
+  color: hsl(0, 0%, 95%);
+}
+
+h2 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+p:nth-child(3) {
+  font-family: 'Lexend Deca', sans-serif;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.btn-accent-type-sedan {
+  color: hsl(31, 77%, 52%);
+}
+
+.btn-accent-type-suv {
+  color: hsl(184, 100%, 22%);
+}
+
+.btn-accent-type-luxury {
+  color: hsl(179, 100%, 13%);
+}
+
+.btn {
+  text-transform: capitalize;
+}
+
+/*   Layout   */
+
+img {
+  width: 3.2em;
+  height: 2em;
+  margin-bottom: 1.5em;
+}
+
+.card {
+  max-width: 250px;
+  margin: 0 1em 0 1em;
+  margin: 0; 
+  padding: 3em;
+}
+
+.card-sedan {
+  background-color: var(--accent-sedan);
+}
+
+.card-suv {
+  background-color: var(--accent-suv);
+}
+
+.card-luxury {
+  background-color: var(--accent-luxury);
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 125px;
+  height: 45px;
+  border-radius: 45px;
+}
+
+.btn p {
+  padding-top: 11.5px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: var(--light-gray);
+  background-color: transparent;
+  border: 1px solid var(--light-gray);
+  margin-bottom: 0;
+}
+
+@media (min-width: 300px) {
+  .card {
+    margin: 0 1em 0 1em;
+  }
+}
+
+@media (min-width: 400px) {
+  .card {
+    margin: 0 auto;  
+  }
+}
+
+@media (min-width: 750px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card {
+    margin: 0;
+  }
+
+  .btn {
+    color: var(--light-gray);
+    background-color: transparent;
+    border: 1px solid hsl(0, 0%, 95%);
+  }
+
+  .btn:hover {
+    background-color: var(--light-gray);
+  }
+
+  #btn-sedan:hover {
+    color: var(--accent-sedan);
+  }
+
+  #btn-suv:hover {
+    color: var(--accent-suv);
+  }
+
+  #btn-luxury:hover {
+    color: var(--accent-luxury);
+  }
+}

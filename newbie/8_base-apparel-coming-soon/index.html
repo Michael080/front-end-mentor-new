@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+</head>
+<body>
+
+  <div class="img img-logo"></div>
+  <div class="container container-main">
+    <div class="call-to-action">
+      <h1><span class="accent-txt">We're</span> coming soon</h1>
+      <p class="accent-txt body-copy">Hello fellow shoppers! We're currently building our new fashion store. 
+      Add your email below to stay up-to-date with announcements and our launch deals.</p>
+      <form class="container container-email" action="">
+        <!-- css-tricks form-validation -->
+        <!-- ! https://css-tricks.com/form-validation-part-2-constraint-validation-api-javascript/ -->
+        <!-- mozilla form validation: -->
+        <!-- ! https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation -->
+        <input class="email-input accent-txt" type="email" placeholder="email address">
+        <div class="hidden img email-error-icon"></div>
+        <div>
+          <div class="btn-container">
+            <div class="btn-submit hover-cursor">
+              <div class="submit-arrow"></div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <p class="hidden email-invalid-msg">Please provide valid email</p>
+    </div>
+    <div class="image-container">
+      <div class="img img-hip-lady"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/Michael080">Michael Rollin</a>.
+    </p>
+  </footer>
+
+  <!-- TODO --- Remove attr: 'nonce'??? -->
+  <script src="script.js" nonce="r@nd0m"></script>
+</body>
+</html>

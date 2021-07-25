@@ -1,0 +1,293 @@
+/* General */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  color: var(--dark-magenta);
+  padding: .75em;
+}
+
+h1,
+p {
+  margin-top: 0;
+}
+
+/* colors */
+:root {
+  /* primary */
+  --dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+
+  /* neutral */
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* Typography */
+
+.description,
+.review {
+  line-height: 1.75;
+}
+
+.description {
+  margin-bottom: 3em;
+}
+
+.rating,
+.name {
+  font-weight: 700;
+}
+
+.card {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.verified {
+  color: var(--soft-pink);
+  margin-bottom: 0;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  margin-bottom: .25em;
+}
+
+/* Layout */
+
+.rating,
+.container-reviews,
+.card {
+  margin: 0 auto;
+}
+
+.rating,
+.card {
+  border-radius: .5em;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-main {
+  margin: 0 auto;
+  width: 326.5px;
+
+}
+
+.container-bio {
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.rating {
+  background-color: var(--light-grayish-magenta);
+  margin-bottom: 1.5em;
+  padding: 1em;
+}
+
+.rated {
+  margin-bottom: 0;
+}
+
+.container-reviews {
+  color: var(--white);
+}
+
+.card {
+  background-color: var(--dark-magenta);
+  max-width: 405px;
+  padding: 1.75em;
+  margin-bottom: 1.5em;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* images */
+.stars {
+  margin-bottom: 1em;
+}
+
+.star {
+  display: inline-block;
+  background-image: url(./images/icon-star.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  width: 20px;
+  height: 20px;
+  margin-right: .5em;
+}
+
+.star:nth-child(5) {
+  margin-right: 0;
+}
+
+.profile-pic {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 45px;
+  height: 45px;
+  margin-right: 1.5em;
+  border-radius: 100%;
+}
+
+.profile-pic-colton-smith {
+  background-image: url(./images/image-colton.jpg);
+}
+
+.profile-pic-irene-roberts {
+  background-image: url(./images/image-irene.jpg);
+}
+
+.profile-pic-anne-wallace {
+  background-image: url(./images/image-anne.jpg);
+}
+
+/* Media Queries */
+
+@media (min-width: 900px) {
+  .container-ratings,
+  .container-reviews {
+    flex-direction: row;
+  }
+
+  .container-main {
+    width: 861.5px;
+  }
+
+  .heading {
+    width: 100%;
+    padding: 1.5em;
+    margin-bottom: 0;
+  }
+
+  .description {
+    margin-bottom: 1em;
+  }
+
+  .container-ratings {
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .rating {
+    width: 260px;
+  }
+
+  .container-reviews {
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-main {
+    width: 871px;
+  }
+
+  .heading {
+    text-align: left;
+    padding-top: 0;
+  }
+
+  .container-sub-1 {
+    flex-direction: row;
+  }
+
+  .container-ratings {
+    flex-direction: column;
+  }
+
+  .rating {
+    display: flex;
+    align-items: center;
+    height: 5em;
+    width: 525px;
+  }
+
+  .stars {    
+    margin: 0px 1.75em 0 1em;
+  }
+
+  .card {
+    margin-bottom: 2em;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    padding-top: 8em;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: .25em;
+  }
+
+  .container-main {
+    width: 85%;
+    max-width: 1322px;
+  }
+
+  .heading {
+    width: 60%;
+    margin-right: 45px;
+    padding: 0;
+  }
+
+  .rating:first-child {
+    margin-left: 45px;
+  }
+
+  .rating:last-child {
+    margin-right: 45px;
+  }
+
+  .container-reviews {
+    width: 100%;
+    height: 315px;
+    margin-top: 4em;
+  }
+
+  .card {
+    width: 360px;
+    height: 264px;
+    justify-content: space-between;
+  }
+
+  .card:first-child {
+    margin-left: 0;
+  }
+
+  .card:nth-child(2) {
+    margin-top: 15px;
+  }
+
+  .card:last-child {
+    margin-top: 30px;
+  }
+}
