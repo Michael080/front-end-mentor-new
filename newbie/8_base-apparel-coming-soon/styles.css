@@ -150,6 +150,12 @@ input[type='email'] {
     margin-top: 11.5em;
     margin-left: 25px;
   }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    margin-left: 3em;
+  }
 }
 
 /* TODO --- Move queries to corresponding sections */
