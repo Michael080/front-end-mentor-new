@@ -2,35 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- fonts -->
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">  -->
+  <!-- styles -->
+  <link rel="stylesheet" href="styles.css">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro component with sign up form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Frontend Mentor | Intro component with sign up form</title>
 </head>
 <body>
 
-  Learn to code by watching others
-
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
-
-  Try it free 7 days then $20/mo. thereafter
-
-  First Name 
-  Last Name 
-  Email Address
-  Password
-
-  Claim your free trial 
-
-  By clicking the button, you are agreeing to our Terms and Services
+  <div class="container-main">
+    <div class="content">
+      <h1>  Learn to code by watching others</h1>
+      <p class="description">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+        but understanding how developers think is invaluable.</p>
+      <div class="call-to-action">
+        <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
+      </div>
+    </div>
+    <!--! TODO --- Use placeholder values instead of id to hook elems & build error msgs -->
+    <form action="" class="sign-up">
+      <input type="text" placeholder="first name" minlength="2" maxlength="25" id="first-name" required>
+      <!-- ! Comment for reference - delete when not in use -->
+      <!-- <p class="invalid">First Name cannot be left empty</p> -->
+      <input type="text" placeholder="last name" minlength="2" maxlength="25" id="last-name" required>
+      <input type="email" placeholder="email address" id="email" required>
+      <input type="password" placeholder="password" minlength="8" maxlength="25" id="password" required>
+      <div class="submit">
+        <p>Claim your free trial</p>
+      </div>
+      <p class="fine-print">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
+    </form>
+  </div>
   
   <footer>
     <p class="attribution">
@@ -38,5 +46,9 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer>
+
+  <!-- TODO --- Remove attr: 'nonce'??? -->
+  <script src="script.js" nonce="r@nd0m"></script>
+  <!-- <script src="script.js"></script> -->
 </body>
 </html>
