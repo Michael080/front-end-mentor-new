@@ -27,12 +27,22 @@
     </div>
     <!--! TODO --- Use placeholder values instead of id to hook elems & build error msgs -->
     <form action="" class="sign-up">
-      <input type="text" placeholder="first name" minlength="2" maxlength="25" id="first-name" required>
-      <!-- ! Comment for reference - delete when not in use -->
-      <!-- <p class="invalid">First Name cannot be left empty</p> -->
-      <input type="text" placeholder="last name" minlength="2" maxlength="25" id="last-name" required>
-      <input type="email" placeholder="email address" id="email" required>
-      <input type="password" placeholder="password" minlength="8" maxlength="25" id="password" required>
+      <div class="input-container first">
+        <input type="text" placeholder="first name" minlength="2" maxlength="25"  required>
+        <div class="error-icon" id="first-name"></div>
+      </div>
+      <div class="input-container last first">
+        <input type="text" placeholder="last name" minlength="2" maxlength="25"  required>
+        <div class="error-icon" id="last-name"></div>  
+      </div>
+      <div class="input-container email">
+        <input type="email" placeholder="email address"  required>
+        <div class="error-icon" id="email"></div>
+      </div>
+      <div class="input-container password">
+        <input type="password" placeholder="password" minlength="8" maxlength="25"  required>
+        <div class="error-icon" id="password"></div>
+      </div>
       <div class="submit">
         <p>Claim your free trial</p>
       </div>
