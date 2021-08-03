@@ -78,25 +78,25 @@ function hideElement(action, elem) {
 
 //---------------------  display errors  --------------------- 
 
-  // check if applicable error is already displayed to user
-  const isRedundantError = (errors, elem) => {
-    let result = []; // store bools from isRedundant() loop
-    
-    const isRedundant = err => { 
-      return elem.parentElement.nextElementSibling.classList.contains(err);
-    }
-
-    errors.forEach(error => {
-      if (isRedundant(error)) {
-        result.push(true);
-      } else if (!isRedundant(error)) {
-        result.push(false);
-        form.removeChild(elem.parentElement.nextElementSibling);
-      }
-    })
-
-    return result;
+// check if applicable error is already displayed to user
+const isRedundantError = (errors, elem) => {
+  let result = []; // store bools from isRedundant() loop
+  
+  const isRedundant = err => { 
+    return elem.parentElement.nextElementSibling.classList.contains(err);
   }
+
+  errors.forEach(error => {
+    if (isRedundant(error)) {
+      result.push(true);
+    } else if (!isRedundant(error)) {
+      result.push(false);
+      form.removeChild(elem.parentElement.nextElementSibling);
+    }
+  })
+
+  return result;
+}
 
 function displayError(errors, elem) {
   const nextElem = elem.parentElement.nextElementSibling;
