@@ -76,16 +76,10 @@ function hideElement(action, elem) {
   displaySwitch[action]();
 }
 
-// TODO --- Break into separate functions
-function displayError(errors, elem) {
-  const nextElem = elem.parentElement.nextElementSibling;
-  // check if error msg is already displayed
-  const hasError = elem => {
-    return nextElem.classList.contains('invalid');
-  }
+//---------------------  display errors  --------------------- 
 
   // check if applicable error is already displayed to user
-  const isRedundantError = () => {
+  const isRedundantError = (errors, elem) => {
     let result = []; // store bools from isRedundant() loop
     
     const isRedundant = err => { 
@@ -104,6 +98,12 @@ function displayError(errors, elem) {
     return result;
   }
 
+function displayError(errors, elem) {
+  const nextElem = elem.parentElement.nextElementSibling;
+  // check if error msg is already displayed
+  const hasError = elem => {
+    return nextElem.classList.contains('invalid');
+  }
   // create array of strings from placeholder 
   let fieldType = elem.placeholder.split(' ');
   // capitalize text for use in error msg
@@ -113,15 +113,16 @@ function displayError(errors, elem) {
     createErrorElem(createErrorMessage(fieldType, errors, elem), errors);
 
     if (hasError(elem)) {
-
-    if (isRedundantError().includes(false)){
-      elem.parentNode.after(errorMsg);
+      if (isRedundantError(errors, elem).includes(false)){
+        // append error elem after input-container
+        elem.parentNode.after(errorMsg); 
+      } else {
+        // break flow if returned array doesn't contain any false values
+        return;
+      }    
     } else {
-      // break flow if returned array doesn't contain any false values
-      return;
-    }    
-  } else {
-    elem.parentNode.after(errorMsg); // append error elem
+    // append error elem after input-container
+    elem.parentNode.after(errorMsg); 
   }
 }
 
