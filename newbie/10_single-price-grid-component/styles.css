@@ -1,6 +1,11 @@
 /* General */
 
-
+h1,
+h2,
+p,
+.btn-sign-up {
+  margin-top: 0;
+}
 
 /* colors */
 
@@ -18,6 +23,8 @@
 
 
 /* Layout */
+
+
 
     .attribution { 
       font-size: 11px; text-align: center;
