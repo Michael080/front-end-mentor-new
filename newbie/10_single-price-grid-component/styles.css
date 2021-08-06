@@ -7,6 +7,10 @@ p,
   margin-top: 0;
 }
 
+body {
+  background: var(--light-gray);
+}
+
 /* colors */
 
 :root {
@@ -21,14 +25,25 @@ p,
 
 /* Typography */
 
-.container-lower {
-  color: white;
-}
-
 /* Layout */
 
 h1 {
   color: var(--cyan);
+}
+
+.container-upper,
+.sign-up,
+.description {
+  padding: 1.5em;
+}
+
+.container-main {
+  margin: 1.5em;
+}
+
+.container-lower {
+  color: white;
+  width: 100%;
 }
 
 .container-upper {
