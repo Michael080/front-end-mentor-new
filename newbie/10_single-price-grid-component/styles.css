@@ -100,6 +100,8 @@ strong {
 .container-upper {
   color: var(--grayish-blue);
   background-color: white;
+  border-top-left-radius: .35em;
+  border-top-right-radius: .35em;
 }
 
 .container-upper h2 {
@@ -121,6 +123,8 @@ strong {
 
 .description {
   background-color: var(--light-cyan);
+  border-bottom-left-radius: .35em;
+  border-bottom-right-radius: .35em;
 }
 
 .attribution { 
