@@ -19,11 +19,9 @@ body {
   --cyan: hsl(179, 62%, 43%);
   --light-cyan: hsl(179, 61%, 49%);
   --very-light-cyan: hsl(179, 55%, 75%);
-
-  /* --light-cyan: #49bebd; */
-
   /* #49bebd */
   --yellow: hsl(71, 73%, 54%);
+
   /* neutral */
   --light-gray: hsl(204, 43%, 93%);
   --grayish-blue: hsl(218, 22%, 67%);
@@ -140,7 +138,18 @@ strong {
 /* buttons */
 
 .btn-sign-up {
+  display: grid;
+  place-items: center;
+  font-weight: 700;
   background-color: var(--yellow);
+  height: 3em;
+  border-radius: .5em;
+}
+
+.btn-sign-up:hover {
+  background-color: white;
+  color: var(--yellow);
+  cursor: pointer;
 }
 
 /* images */
