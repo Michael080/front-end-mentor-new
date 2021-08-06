@@ -25,11 +25,11 @@ body {
 
 /* Typography */
 
-/* Layout */
-
 h1 {
   color: var(--cyan);
 }
+
+/* Layout */
 
 .container-upper,
 .sign-up,
