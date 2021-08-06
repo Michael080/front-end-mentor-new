@@ -1,4 +1,4 @@
-/* General */
+/*-- General --*/
 
 h1,
 h2,
@@ -13,7 +13,6 @@ body {
 }
 
 /* colors */
-
 :root {
   /* primary */
   --cyan: hsl(179, 62%, 43%);
@@ -27,7 +26,7 @@ body {
   --grayish-blue: hsl(218, 22%, 67%);
 }
 
-/* Typography */
+/*-- Typography --*/
 
 .vertical-center,
 .features {
@@ -79,7 +78,7 @@ strong {
   line-height: 1.5;
 }
 
-/* Layout */
+/*-- Layout --*/
 
 .container-upper,
 .sign-up,
@@ -90,7 +89,6 @@ strong {
 .container-main {
   margin: 1.5em;
 }
-
 
 .container-lower {
   color: white;
@@ -118,7 +116,6 @@ strong {
 
 .sign-up p:nth-child(3) {
   margin-bottom: 1.5em;
-  /* background-color: blue; */
 }
 
 .description {
