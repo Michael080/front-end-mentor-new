@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet"> 
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
 
   <title>Frontend Mentor | Single Price Grid Component</title>
@@ -23,7 +27,9 @@
     <div class="container container-lower">
       <div class="sign-up">
         <h2>Monthly Subscription</h2>
-        <p class="monthly-price"><strong>&dollar;</strong>29 per month</p>
+        <div class="monthly-price">
+          <p><strong>&dollar;29</strong></p><span class="vertical-center"> per month</span>
+        </div>
         <p>Full access for less than &dollar;1 a day</p>
         <div class="btn-sign-up">Sign Up</div>
       </div>

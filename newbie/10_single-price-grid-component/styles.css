@@ -8,6 +8,7 @@ p,
 }
 
 body {
+  font-family: 'Karla', sans-serif;
   background: var(--light-gray);
 }
 
@@ -17,6 +18,11 @@ body {
   /* primary */
   --cyan: hsl(179, 62%, 43%);
   --light-cyan: hsl(179, 61%, 49%);
+  --very-light-cyan: hsl(179, 55%, 75%);
+
+  /* --light-cyan: #49bebd; */
+
+  /* #49bebd */
   --yellow: hsl(71, 73%, 54%);
   /* neutral */
   --light-gray: hsl(204, 43%, 93%);
@@ -25,8 +31,54 @@ body {
 
 /* Typography */
 
+.vertical-center,
+.features {
+  opacity: 65%;
+}
+
 h1 {
   color: var(--cyan);
+  font-size: 1.5rem;
+}
+
+h2 {
+ font-size: 1rem;
+ line-height: 1.5;
+}
+
+p {
+  font-size: .85rem;
+  line-height: 1.75;
+}
+
+strong {
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+.container-lower h2 {
+  font-size: 1.15rem;
+}
+
+.monthly-price {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  height: 2.5em;
+}
+
+.monthly-price p {
+  margin-right: .5em;
+  height: 100%;
+}
+
+.vertical-center {
+  opacity: 65%;
+  padding-top: .5em;
+}
+
+.features {
+  line-height: 1.5;
 }
 
 /* Layout */
@@ -41,12 +93,14 @@ h1 {
   margin: 1.5em;
 }
 
+
 .container-lower {
   color: white;
   width: 100%;
 }
 
 .container-upper {
+  color: var(--grayish-blue);
   background-color: white;
 }
 
@@ -54,8 +108,17 @@ h1 {
   color: var(--yellow);
 }
 
+.monthly-price {
+  margin-bottom: .5em;
+}
+
 .sign-up {
   background-color: var(--cyan);
+}
+
+.sign-up p:nth-child(3) {
+  margin-bottom: 1.5em;
+  /* background-color: blue; */
 }
 
 .description {
