@@ -87,7 +87,9 @@ strong {
 }
 
 .container-main {
-  margin: 1.5em;
+  margin: 1.5em auto;
+  margin-top: 5em;
+  max-width: 311px;
 }
 
 .container-lower {
@@ -134,7 +136,42 @@ strong {
 
 /* media-queries --- (layout) */
 
+@media (min-width: 750px) {
+  html {
+    font-size: 110%;
+  }
 
+  body {
+    padding: 1.53em;
+  }
+
+  .container-main {
+    margin: 1.5em auto;
+    margin-top: 5em;
+    max-width: 625px;
+  }
+
+  .container-upper,
+  .sign-up,
+  .description {
+    padding: 2.5em;
+  }
+
+  .container-lower {
+    display: flex;
+    flex-direction: row;
+  } 
+
+  .sign-up {
+    width: 50%;
+    border-bottom-left-radius: .35em;
+  }
+
+  .description {
+    width: 50%;
+    border-bottom-left-radius: 0;
+  }
+}
 
 /* buttons */
 
