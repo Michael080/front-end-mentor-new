@@ -157,10 +157,6 @@ strong {
     padding: 2.5em;
   }
 
-  .test {
-    color: blue;
-  }
-
   .container-lower {
     display: flex;
     flex-direction: row;
